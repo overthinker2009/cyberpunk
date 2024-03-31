@@ -16,6 +16,19 @@
   font-weight: 400;
   font-display: swap;
 }
+:root {
+  --primary-text-color:#000;
+  --secondary-color:#777;
+  --text-blue:#52bedc;
+  --text-white:#fff;
+  --text-yellow:#f8f200;
+  --bg-yellow:#f8f200;
+  --bg-black: #000;
+  --mobile: 320px;
+  --tablet:1024px;
+  --desctop:1920px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -23,6 +36,75 @@
   list-style: none;
 }
 
+.conteiner {
+  padding: 0 12px;
+  margin: 0 auto;
+}
+
 body {
   font-family: "Roboto", sans-serif;
+}
+
+.header {
+  background-image: url(./images/cyberboy.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 760px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.nav {
+  min-width: 300px;
+  width: 100%;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  margin: 0 auto;
+}
+.nav__icons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.square {
+  padding: 30px 24px;
+  background-color: var(--bg-yellow);
+  margin-bottom: -50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  -webkit-clip-path: polygon(15% 1%, 100% 0, 100% 85%, 88% 100%, 0% 100%, 0% 15%);
+          clip-path: polygon(15% 1%, 100% 0, 100% 85%, 88% 100%, 0% 100%, 0% 15%);
+}
+.square__title {
+  font-family: "Archangelsk";
+  font-weight: 400;
+  font-size: 30px;
+  text-align: center;
+  color: #000;
+  margin-bottom: 25px;
+}
+.square__btn {
+  background: none;
+  border: none;
+  padding: 19px 50px;
+  font-weight: 700;
+  font-size: 20px;
+  background-color: var(--bg-black);
+  margin-left: 15px;
+  cursor: pointer;
+  transition: opacity, 0.5s;
+}
+.square__btn:hover {
+  opacity: 0.8;
+}
+.square__btnt {
+  color: var(--bg-yellow);
 }/*# sourceMappingURL=style.css.map */
