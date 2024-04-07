@@ -60,6 +60,7 @@ body {
 }
 
 .header {
+    margin-bottom: 120px;
     width: 100%;
     max-width: 1920px;
     background-image: url(./images/cyberboy.jpg);
@@ -90,50 +91,6 @@ body {
 }
 
 
-
-
-
-
-.nav {
-
-    width: 100%;
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    margin: 0 auto;
-
-
-    @media (min-width:500px) {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    &__icons {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width: 380px;
-
-    }
-
-    &__img {
-        height: 50px;
-        width: 200px;
-
-        @media(min-width :1024px) {
-            width: 296px;
-        }
-
-
-
-    }
-
-
-}
 
 
 .square {
@@ -202,6 +159,8 @@ body {
 
 
 
+
+
     }
 
     &__btn {
@@ -210,12 +169,107 @@ body {
 
 }
 
-img {
+.nav {
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 auto;
+
+    @media(min-width:500px){
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__icons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width:380px;
+    }
+
+    &__img {
+        width: 200px;
+
+    @media(min-width:1024px){
+        width: 296px;
+    }
+}
+
+    .nav__icon img{
     width: 25px;
     height: 25px;
-
-    @media (min-width:1024px) {
-        width: 30px;
-        height: 30px;
     }
+
+}
+
+
+.about {
+    &__title {
+        font-family: "Archangelsk";
+        font-weight: 400;
+        font-size: 30px;
+        color: #000;
+        margin-bottom: 25px;
+
+        @media(min-width:768px) {
+            font-size: 18px;
+            min-width: 790px;
+        }
+
+        @media(min-width :1024px) {
+            width: 980px;
+        }
+
+    }
+    
+
+    &__desc {
+        font-size: 16px;
+        line-height: 200%;
+        font-weight: 400;
+        color: #777;
+        margin-bottom: 70px;
+        
+       
+    }
+    
+}
+
+.blue {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 200%;
+    color: #52bedc;
+}
+.images{
+
+    @media (min-width:500px) {
+        max-width: 1920px;
+        margin: 0 auto;
+        column-gap: 32px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "a b"
+                              "c c";
+    }
+    & img {
+        margin-bottom: 32px;
+        object-fit: cover;
+        width: 100%;
+       
+    }
+}
+
+.img1{
+    grid-area: a;
+}
+.img2{
+    grid-area: b;
+}
+.img3{
+    grid-area: c;
 }
