@@ -20,20 +20,20 @@
 }
 
 
-:root{
-    --primary-text-color:#000;
-    --secondary-color:#777;
-    --text-blue:#52bedc;
-    --text-white:#fff;
-    --text-yellow:#f8f200;
-    --bg-yellow:#f8f200;
+:root {
+    --primary-text-color: #000;
+    --secondary-color: #777;
+    --text-blue: #52bedc;
+    --text-white: #fff;
+    --text-yellow: #f8f200;
+    --bg-yellow: #f8f200;
     --bg-black: #000;
 
     //breakpoints//
 
     --mobile: 320px;
-    --tablet:1024px;
-    --desctop:1920px;
+    --tablet: 1024px;
+    --desctop: 1920px;
 }
 
 * {
@@ -43,17 +43,26 @@
     list-style: none;
 }
 
-.conteiner{
+.conteiner {
     padding: 0 12px;
     margin: 0 auto;
+    max-width: 1920px;
+    width: 90%;
+
+    @media(min-width: 1024px) {
+        padding: 0 120px;
+        width: 80%;
+    }
 }
 
 body {
     font-family: "Roboto", sans-serif;
 }
 
-.header{
-    background-image:url(./images/cyberboy.jpg);
+.header {
+    width: 100%;
+    max-width: 1920px;
+    background-image: url(./images/cyberboy.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -62,15 +71,31 @@ body {
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-between;
+
+    @media(min-width:400px) {
+
+        background-image: url(./images/header-bg-tablet.jpg);
+        min-height: 1000px;
+    }
+
+    @media(min-width:1024px) {
+        background-image: url(./images/header-bg-desctop.jpg);
+        min-height: 1000px;
+    }
+
+    @media(min-width:1920px) {
+        align-items: center;
+    }
+
 }
 
-// .nav{
-//     mxw
-// }
 
 
-.nav{
-    min-width: 300px;
+
+
+
+.nav {
+
     width: 100%;
     padding-top: 20px;
     display: flex;
@@ -80,17 +105,39 @@ body {
     margin: 0 auto;
 
 
+    @media (min-width:500px) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     &__icons {
         width: 100%;
         display: flex;
         justify-content: space-between;
-        
+        align-items: center;
+        max-width: 380px;
 
     }
+
+    &__img {
+        height: 50px;
+        width: 200px;
+
+        @media(min-width :1024px) {
+            width: 296px;
+        }
+
+
+
+    }
+
+
 }
 
 
 .square {
+    max-width: 320px;
     padding: 30px 24px;
     background-color: var(--bg-yellow);
     margin-bottom: -50px;
@@ -99,18 +146,34 @@ body {
     align-items: center;
     clip-path: polygon(15% 1%, 100% 0, 100% 85%, 88% 100%, 0% 100%, 0% 15%);
 
+    @media(min-width:780px) {
+        max-width: 640px;
+        width: 100%;
+        margin-right: 35px;
+        margin-bottom: 0;
+    }
+
+    @media(min-width:1024px) {
+        margin-right: 320px;
+        padding: 70px;
+    }
 
 
-    &__title{
-        font-family:"Archangelsk";
+    &__title {
+        font-family: "Archangelsk";
         font-weight: 400;
         font-size: 30px;
         text-align: center;
         color: #000;
         margin-bottom: 25px;
+
+        @media(min-width:780px) {
+            font-size: 62px;
+            max-width: 624px;
+        }
     }
 
-    &__btn{
+    &__btn {
         background: none;
         border: none;
         padding: 19px 50px;
@@ -121,12 +184,38 @@ body {
         cursor: pointer;
         transition: opacity, 0.5s;
 
+        @media(min-width:780px) {
+            font-size: 24px;
+            padding: 20px 50px;
+        }
+
         &:hover {
             opacity: 0.8;
         }
+
+        @media(min-width:500px) {
+            margin-bottom: 0;
+            margin-right: 35px;
+
+        }
+
+
+
+
     }
-    &__btnt{
+
+    &__btn {
         color: var(--bg-yellow);
     }
 
+}
+
+img {
+    width: 25px;
+    height: 25px;
+
+    @media (min-width:1024px) {
+        width: 30px;
+        height: 30px;
+    }
 }

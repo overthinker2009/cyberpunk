@@ -17,16 +17,16 @@
   font-display: swap;
 }
 :root {
-  --primary-text-color:#000;
-  --secondary-color:#777;
-  --text-blue:#52bedc;
-  --text-white:#fff;
-  --text-yellow:#f8f200;
-  --bg-yellow:#f8f200;
+  --primary-text-color: #000;
+  --secondary-color: #777;
+  --text-blue: #52bedc;
+  --text-white: #fff;
+  --text-yellow: #f8f200;
+  --bg-yellow: #f8f200;
   --bg-black: #000;
   --mobile: 320px;
-  --tablet:1024px;
-  --desctop:1920px;
+  --tablet: 1024px;
+  --desctop: 1920px;
 }
 
 * {
@@ -39,6 +39,14 @@
 .conteiner {
   padding: 0 12px;
   margin: 0 auto;
+  max-width: 1920px;
+  width: 90%;
+}
+@media (min-width: 1024px) {
+  .conteiner {
+    padding: 0 120px;
+    width: 80%;
+  }
 }
 
 body {
@@ -46,6 +54,8 @@ body {
 }
 
 .header {
+  width: 100%;
+  max-width: 1920px;
   background-image: url(./images/cyberboy.jpg);
   background-position: center;
   background-size: cover;
@@ -56,9 +66,25 @@ body {
   align-items: flex-end;
   justify-content: space-between;
 }
+@media (min-width: 400px) {
+  .header {
+    background-image: url(./images/header-bg-tablet.jpg);
+    min-height: 1000px;
+  }
+}
+@media (min-width: 1024px) {
+  .header {
+    background-image: url(./images/header-bg-desctop.jpg);
+    min-height: 1000px;
+  }
+}
+@media (min-width: 1920px) {
+  .header {
+    align-items: center;
+  }
+}
 
 .nav {
-  min-width: 300px;
   width: 100%;
   padding-top: 20px;
   display: flex;
@@ -67,13 +93,32 @@ body {
   align-items: center;
   margin: 0 auto;
 }
+@media (min-width: 500px) {
+  .nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 .nav__icons {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  max-width: 380px;
+}
+.nav__img {
+  height: 50px;
+  width: 200px;
+}
+@media (min-width: 1024px) {
+  .nav__img {
+    width: 296px;
+  }
 }
 
 .square {
+  max-width: 320px;
   padding: 30px 24px;
   background-color: var(--bg-yellow);
   margin-bottom: -50px;
@@ -83,6 +128,20 @@ body {
   -webkit-clip-path: polygon(15% 1%, 100% 0, 100% 85%, 88% 100%, 0% 100%, 0% 15%);
           clip-path: polygon(15% 1%, 100% 0, 100% 85%, 88% 100%, 0% 100%, 0% 15%);
 }
+@media (min-width: 780px) {
+  .square {
+    max-width: 640px;
+    width: 100%;
+    margin-right: 35px;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .square {
+    margin-right: 320px;
+    padding: 70px;
+  }
+}
 .square__title {
   font-family: "Archangelsk";
   font-weight: 400;
@@ -90,6 +149,12 @@ body {
   text-align: center;
   color: #000;
   margin-bottom: 25px;
+}
+@media (min-width: 780px) {
+  .square__title {
+    font-size: 62px;
+    max-width: 624px;
+  }
 }
 .square__btn {
   background: none;
@@ -102,9 +167,32 @@ body {
   cursor: pointer;
   transition: opacity, 0.5s;
 }
+@media (min-width: 780px) {
+  .square__btn {
+    font-size: 24px;
+    padding: 20px 50px;
+  }
+}
 .square__btn:hover {
   opacity: 0.8;
 }
-.square__btnt {
+@media (min-width: 500px) {
+  .square__btn {
+    margin-bottom: 0;
+    margin-right: 35px;
+  }
+}
+.square__btn {
   color: var(--bg-yellow);
+}
+
+img {
+  width: 25px;
+  height: 25px;
+}
+@media (min-width: 1024px) {
+  img {
+    width: 30px;
+    height: 30px;
+  }
 }/*# sourceMappingURL=style.css.map */
