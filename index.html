@@ -11,7 +11,7 @@
 
 <body>
     <header class="header">
-        <div class="conteiner">
+        <div class="container">
             <nav class="nav">
                 <a href="./index.html" class="nav__logo">
                     <img class="nav__img" src="./images/Cyberpunk_2077_logo 1.svg" alt="logo" class="nav__img">
@@ -37,50 +37,81 @@
         </div>
     </header>
     <main>
-        <div class="conteiner">
+        <div class="container">
             <section class="about">
                 <h3 class="about__title">Найт-Сити изменит тебя навсегда!</h3>
                 <p class="about__desc"><span class="blue">Cyberpunk 2077</span>
-                     — приключенческая ролевая игра, действие которой происходит в мегаполисе Найт-Сити,
+                    — приключенческая ролевая игра, действие которой происходит в мегаполисе Найт-Сити,
                     где власть, роскошь и модификации тела ценятся выше всего. Ты играешь за V, наёмника в поисках
                     устройства, позволяющего обрести бессмертие. Ты сможешь менять киберимпланты, навыки и стиль игры
                     своего персонажа, исследуя открытый мир, где твои поступки влияют на ход сюжета и всё, что тебя
                     окружает.</p>
-                  
+
             </section>
         </div>
         <div class="images">
 
             <picture class="img1">
-                <source media="(min-width:500px)"
-                    srcset="./images/tablet/city-1.png">
-                <source media="(min-width:320px)"
-                    srcset="./images/mobile/night-city-1.png">
+                <source media="(min-width:500px)" srcset="./images/tablet/city-1.png">
+                <source media="(min-width:320px)" srcset="./images/mobile/night-city-1.png">
                 <img src="./images/mobile/night-city-1.png" alt="">
             </picture>
 
 
             <picture class="img2">
-              
-                <source media="(min-width:500px)"
-                    srcset="./images/tablet/city-2.png">
-                <source media="(min-width:320px)"
-                    srcset="./images/mobile/night-city-2.png">
+
+                <source media="(min-width:500px)" srcset="./images/tablet/city-2.png">
+                <source media="(min-width:320px)" srcset="./images/mobile/night-city-2.png">
                 <img src="./images/mobile/night-city-2.png" alt="">
             </picture>
 
             <picture class="img3">
-                <source media="(min-width:1024px)"
-                    srcset="./images/desktop/night-3.png">
-                <source media="(min-width:500px)"
-                    srcset="./images/tablet/city-3.png">
-                <source media="(min-width:320px)"
-                    srcset="./images/mobile/night-city-3.png">
+                <source media="(min-width:1024px)" srcset="./images/desktop/night-3.png">
+                <source media="(min-width:500px)" srcset="./images/tablet/city-3.png">
+                <source media="(min-width:320px)" srcset="./images/mobile/night-city-3.png">
                 <img src="./images/mobile/night-city-3.png" alt="">
             </picture>
 
 
         </div>
+
+        <section class="form">
+            <div class="container">
+                <div class="form-images">
+                    <div class="form-images-one"></div>
+                    <div class="form-images-two"></div>
+                </div>
+                <div class="form-description">
+                    <h3 class="form__title">Играй и выигрывай!</h3>
+                    <p class="form-desc">Играй в <span class="btext">Cyberpunk 2077</span> и получи
+                        возможность выиграть консоль <span class="btext">Xbox Series X</span> или<span class="btext"> Sony
+                            PlayStation 5</span>! Заполни форму ниже и приложи скриншот
+                        о покупке игры. Итоги розыгрыша будут подведены 1
+                        февраля. Удачи! ;)
+                    </p>
+                    <form class="from-fields">
+                        <label for="text"></label>
+                        <input class="input" name="text" id="text" type="text"
+                            placeholder="Как тебя зовут?" required>
+
+                        <label for="email"></label>
+                        <input class="input" name="email" id="email" type="email"
+                            placeholder="Твой е-mail" required>
+
+                        <label class="download" for="download">прикрепить скриншот</label>
+                        <input class="input-download" id="download" type="file">
+
+                        <button class="form__btn">Отправить</button>
+
+                        
+                        <input class="input-checkbox" id="checkbox" type="checkbox">
+
+                        <label class="checkbox" for="checkbox">Согласен на обработку
+                            персональных данных</label>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
 
 </body>
