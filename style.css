@@ -587,6 +587,12 @@ body {
     gap: 25px;
   }
 }
+@media (min-width: 780px) {
+  .display__icons {
+    flex-direction: row;
+    gap: 25px;
+  }
+}
 .display__icons img:nth-child(1) {
   width: 44px;
   height: 44px;
@@ -714,5 +720,11 @@ body {
     justify-content: space-between;
     width: 100%;
     gap: 32px;
+  }
+}
+@media (min-width: 1024px) {
+  .display__wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
   }
 }/*# sourceMappingURL=style.css.map */
