@@ -708,10 +708,15 @@ body {
 
 .end {
   background-color: #000;
-  width: 320px;
+  width: 380px;
   height: 785px;
 
-
+  @media (min-width:770px) {
+    background-image: url(./images/tablet-punk.jpg);
+    width: 780px;
+    background-repeat: no-repeat;
+    
+  }
 
   &-text-complect {
     font-family: var(--font-family);
@@ -780,6 +785,12 @@ body {
   }
 }
 
+.endimg{
+  @media (min-width:770px) {
+    display: none;
+  }
+}
+
 .disc::before {
   background-image: url(./images/disk.svg);
   width: 24px;
@@ -833,15 +844,18 @@ body {
 
 
 .ends {
-  width: 322px;
+  width: 380px;
   height: 333px;
-
+  @media (min-width:770px) {
+    margin-top: 100px;
+  }
   
 }
 
 .cd-project {
   margin-top: 180px;
   margin-left: 60px;
+  background-color: #fff;
 }
 
 .cd-img {
@@ -849,7 +863,7 @@ body {
 }
 
 .license {
-  width: 320px;
+  width: 380px;
   height: 103px;
   background: #e6e6e6;
 
@@ -873,7 +887,7 @@ body {
 
 
 .r {
-  width: 320px;
+  width: 380px;
   height: 40px;
   background: #000;
 
